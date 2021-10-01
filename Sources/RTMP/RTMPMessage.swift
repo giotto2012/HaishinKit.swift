@@ -336,6 +336,9 @@ final class RTMPCommandMessage: RTMPMessage {
             switch commandName {
             case "close":
                 connection.close(isDisconnected: true)
+            case "onFCPublish":
+                break
+                
             default:
                 connection.dispatch(.rtmpStatus, bubbles: false, data: arguments.first as Any?)
             }
