@@ -337,6 +337,7 @@ final class RTMPCommandMessage: RTMPMessage {
             case "close":
                 connection.close(isDisconnected: true)
             case "onFCPublish":
+                print("Skip")
                 break
                 
             default:
